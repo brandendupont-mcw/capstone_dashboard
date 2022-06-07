@@ -1,12 +1,12 @@
 const siteMetadata = {
   title: 'Loyola University of Chicago Center for Criminal Justice',
   author: 'Don Stemen',
-  headerTitle: 'Bond Court Reform',
+  headerTitle: '',
   description: 'Bond Court Reform Analysis',
   language: 'en-us',
   theme: 'light', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteUrl: 'https://loyolaccj.org/pfa',
+  siteRepo: 'https://loyolaccj.org/pfa',
   siteLogo: '/static/images/favicon.svg',
   image: '/static/images/favicon.svg',
   socialBanner: '/static/images/twitter-card.png',
