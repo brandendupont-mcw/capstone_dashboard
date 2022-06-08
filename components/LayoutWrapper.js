@@ -30,7 +30,7 @@ const LayoutWrapper = ({ children }) => {
           </div>
           <div className="flex items-center text-base leading-5 ">
 
-            <div className="hidden sm:block sm:space-x-14">
+            <div className="hidden sm:block sm:space-x-6">
               {headerNavLinks.map((link) => (
                 <span                   key={link.title} className=' hover:border-maroon hover:border-b-4 '>
                 <Link
