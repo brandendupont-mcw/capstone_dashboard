@@ -3,7 +3,7 @@ import { Fragment } from 'react'
 
 function PopOver({number,popoverText}) {
     return (
-      <span className="inline-flex items-baseline">
+      <span ariaLabel='click me' className="inline-flex items-baseline">
         <Popover className="relative">
           {({ open }) => (
             <>
@@ -12,7 +12,7 @@ function PopOver({number,popoverText}) {
                   ${open ? '' : 'text-opacity-90'} `}
               >
               
-              <span className="inline-block mb-4  text-md font-bold tracking-wider text-maroon">
+              <span className="inline-block  mr-1 text-sm font-bold tracking-wider text-maroon">
                 {number}
                 </span>
               </Popover.Button>

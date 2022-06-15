@@ -30,6 +30,10 @@ module.exports = {
       },
       fontFamily: {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+        //sans: ['Space Grotesk', ...defaultTheme.fontFamily.sans],
+        //sans: ['DM Sans', ...defaultTheme.fontFamily.sans],
+        
+        //'mono': ['Archivo Black']
       },
       colors: {
         primary: colors.blue,
