@@ -25,7 +25,7 @@ function PopOver({number,popoverText}) {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="sm:absolute sm:left-1/2 z-10 mt-3 w-screen max-w-sm sm:-translate-x-1/2 transform px-4 sm:px-0 lg:max-w-md">
+                <Popover.Panel className="sm:absolute sm:left-1/2 z-10 mt-3 sm:w-screen max-w-sm sm:-translate-x-1/2 transform px-4 sm:px-0 lg:max-w-md">
                   <div className="overflow-hidden  bg-gray-50 shadow-xs hover:shadow-lg border-r-[7px] border-b-[7px] border-black border-2 rounded-lg transition duration-300 ease-in-out -translate-y-1 translate-x-1 ">
                     <div className="bg-gray-100 p-4">
 
