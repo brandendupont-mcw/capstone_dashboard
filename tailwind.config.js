@@ -19,7 +19,7 @@ module.exports = {
         '9/16': '56.25%',
       },
         backgroundImage: {
-          'hero': "url('/static/images/squares.svg')",
+          'hero': "url('/public/static/images/squares.svg')",
           'hero-graph': "url('/static/images/graph-paper.svg')",
         },
       lineHeight: {

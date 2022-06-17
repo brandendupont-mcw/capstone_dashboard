@@ -32,7 +32,7 @@ const LayoutWrapper = ({ children }) => {
 
             <div className="hidden sm:block sm:space-x-6">
               {headerNavLinks.map((link) => (
-                <span                   key={link.title} className=' hover:border-maroon hover:border-b-4 '>
+                <span                   key={link.title} className=' hover:border-maroon hover:border-b-4'>
                 <Link
                   href={link.href}
                   className="p-1 font-medium text-gray-900 "
