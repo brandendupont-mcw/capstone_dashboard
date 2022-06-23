@@ -22,7 +22,6 @@ export default function Home({ posts }) {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <OpenPage />
-      <Hero />
       <Feature />
 
 
