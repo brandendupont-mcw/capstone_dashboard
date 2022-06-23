@@ -29,16 +29,26 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+        sans: ['Public Sans', ...defaultTheme.fontFamily.sans],
         //sans: ['Space Grotesk', ...defaultTheme.fontFamily.sans],
         //sans: ['DM Sans', ...defaultTheme.fontFamily.sans],
         
         //'mono': ['Archivo Black']
+        space: ['Space Mono', ...defaultTheme.fontFamily.sans],
+        libre: ['Libre Baskerville', ...defaultTheme.fontFamily.sans],
+
       },
       colors: {
         primary: colors.blue,
         gray: colors.neutral,
         maroon: '#b32347',
+        darkBase: "#042D36",
+        lightBase: "#F6F6F6",
+        electricBlue: "#0BB7C2",
+        accentRed: "#E1004B",
+        black: "#000000",
+        white: "#FFFFFF"
+
       },
       typography: (theme) => ({
         DEFAULT: {
