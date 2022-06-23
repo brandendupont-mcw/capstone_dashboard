@@ -2,6 +2,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
 
+
 const OpenPage = () => {
 
 
@@ -43,7 +44,7 @@ const OpenPage = () => {
             </ul>
           </div>
         
-          <div class="absolute bottom-4 text-white right-1/2   h-10 ">Scroll To Read More</div>
+          <div className="absolute bottom-4 text-white right-1/2   h-10 ">Scroll To Read More</div>
 
       </div>
       
