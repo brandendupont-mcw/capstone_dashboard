@@ -9,7 +9,7 @@ const OpenPage = () => {
 //   <div class="flex-grow border-t-2 border-white"></div>
 
     return (
-      <div className="w-full min-h-screen bg-darkBase">
+      <div className="w-full min-h-screen bg-darkBase mb-48">
 
         <div className="flex p-10 mr-4  justify-end ">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="white"  strokeWidth={2}>
