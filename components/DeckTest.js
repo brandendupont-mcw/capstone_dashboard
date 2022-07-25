@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import {render} from 'react-dom';
 import DeckGL, {GeoJsonLayer, PolygonLayer, TripsLayer} from 'deck.gl';
 import { MapView } from "@deck.gl/core";
-import ReactMapGL, { Marker }  from "react-map-gl";
+import ReactMapGL, { Marker, ScaleControl, NavigationControl }  from "react-map-gl";
 import { StaticMap } from "react-map-gl";
 import {AmbientLight, PointLight, LightingEffect} from '@deck.gl/core';
 import { PureComponent } from 'react';
@@ -242,11 +242,13 @@ function DeckTest() {
         <DeckGL initialViewState={INITIAL_VIEW_STATE} controller={true} {...viewport} layers={layers} >
         < ReactMapGL 
             reuseMaps
-            mapStyle={"mapbox://styles/branden-dupont/cl60y5fzi008p14up0pv50wp9"}
+            mapStyle={"mapbox://styles/branden-dupont/cl61cd7tr007w14qnw3qskiui"}
             mapboxAccessToken={'pk.eyJ1IjoiYnJhbmRlbi1kdXBvbnQiLCJhIjoiY2lmeWZqcXVhNTJwdHUzbTJwbGx2NjljNSJ9.fbeofSfEbOnewOSrZ-wMqA'}
-            controller={true}
+            controller={true} 
+            
             >
                   <Marker longitude={-73.9993101} latitude={40.717595} anchor="bottom" >
+                  <NavigationControl position={'bottom-left'} />
 
               
 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 20 20"  fill="#E1004B">
