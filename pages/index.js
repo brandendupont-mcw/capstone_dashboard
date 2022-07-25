@@ -8,6 +8,7 @@ import Hero from '@/components/Hero'
 import OpenPage from '@/components/HeroLPVC'
 import { Feature } from '@/components/LocationFeature'
 import IntroMap  from "@/components/maps/IntroMap"
+import DeckTest from '@/components/DeckTest'
 
 const MAX_DISPLAY = 5
 
@@ -23,6 +24,8 @@ export default function Home({ posts }) {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <OpenPage />
       <Feature />
+      <DeckTest />
+
 
 
     

@@ -1,5 +1,5 @@
 import React from "react";
-import IntroMap  from "@/components/maps/IntroMap"
+import IntroMap   from "@/components/maps/IntroMap"
 
 export const Feature = () => {
     return (
