@@ -1,10 +1,12 @@
 import React, { Component, Fragment } from "react";
 import { useState, useEffect } from 'react';
-import {render} from 'react-dom';
-import DeckGL, {GeoJsonLayer, PolygonLayer, TripsLayer} from 'deck.gl';
+
+import {useRef, useCallback} from 'react';
+import DeckGL, {GeoJsonLayer, PolygonLayer, TripsLayer, FlyToInterpolator } from 'deck.gl';
 import { MapView } from "@deck.gl/core";
-import ReactMapGL, { Marker, ScaleControl, NavigationControl }  from "react-map-gl";
+import ReactMapGL, { Marker, ScaleControl, NavigationControl, MapRef, }  from "react-map-gl"
 import { StaticMap } from "react-map-gl";
+import Map from 'react-map-gl';
 import {AmbientLight, PointLight, LightingEffect} from '@deck.gl/core';
 import { PureComponent } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
@@ -121,6 +123,9 @@ function DeckTest() {
     animation.id = window.requestAnimationFrame(animate);
     return () => window.cancelAnimationFrame(animation.id);
     }, [animation]);
+
+
+  
     
 
     // set data
@@ -163,13 +168,6 @@ function DeckTest() {
         effects: [lightingEffect]
       };
 
-    const INITIAL_VIEW_STATE = {
-        longitude: -73.9993101,
-        latitude: 40.717595,
-        zoom: 18,
-        bearing: 0,
-        pitch: 40,
-      };
 
 
     const [viewport, setViewport] = useState({
@@ -232,30 +230,64 @@ function DeckTest() {
           }),
       ];
 
+      //const mapRef = useRef(MapRef);
 
 
+
+
+      const mapRef = useRef(null);
+
+
+      const [INITIAL_VIEW_STATE  , setInitialViewState] =  useState( {
+        longitude: -73.9993101,
+        latitude: 40.717595,
+        zoom: 18,
+        bearing: 0,
+        pitch: 40,
+      });
+
+      const goToNYC = useCallback(() => {
+        setInitialViewState({
+          longitude: -73.89619606312276,
+          latitude:  40.75252245990084,                 
+          zoom: 18,
+          bearing: 0,
+          pitch: 40,
+          transitionDuration: 8000,
+          transitionInterpolator: new FlyToInterpolator()
+        })
+      }, []);
+
+
+      
+      
     return (
         <Fragment>
         <div  className='flex justify-center '>
         <div className='w-96 h-96'>
        
-        <DeckGL initialViewState={INITIAL_VIEW_STATE} controller={true} {...viewport} layers={layers} >
-        < ReactMapGL 
+        <DeckGL initialViewState={INITIAL_VIEW_STATE} controller={true}  layers={layers} >
+        < Map
+        
             reuseMaps
             mapStyle={"mapbox://styles/branden-dupont/cl61cd7tr007w14qnw3qskiui"}
             mapboxAccessToken={'pk.eyJ1IjoiYnJhbmRlbi1kdXBvbnQiLCJhIjoiY2lmeWZqcXVhNTJwdHUzbTJwbGx2NjljNSJ9.fbeofSfEbOnewOSrZ-wMqA'}
-            controller={true} 
+            ref={mapRef}
+ 
             
             >
+              <NavigationControl position={'bottom-left'} />
                   <Marker longitude={-73.9993101} latitude={40.717595} anchor="bottom" >
-                  <NavigationControl position={'bottom-left'} />
-
-              
-<svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 20 20"  fill="#E1004B">
-  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-</svg>
-    </Marker>
-               </ReactMapGL >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 20 20"  fill="#E1004B">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                </Marker>
+                <Marker longitude={ -73.89619606312276} latitude={40.75252245990084} id=' Canal St & Lafayette St' anchor="bottom" >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 20 20"  fill="#E1004B">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                </Marker>
+               </Map >
                 <div className="p-10 flex justify-end">
                <div className="bg-darkBase h-[500px] w-[450px] ">
                 <div className="text-xl text-white pt-6 text-center font-space">Canal St Between Center & Baxter</div>
@@ -264,7 +296,8 @@ function DeckTest() {
 </div>
                 <div className="text-white text-center font-space">Wednesday, March 23, 2022</div>
                 <Chart/>
-                <div className="text-white text-center font-space bg-darkBase pb-4 text-xl"><a>Next Intersection &#x2192;</a></div>
+                <div className="text-white text-center font-space bg-darkBase pb-4 text-xl" onClick={goToNYC}><a>Next Intersection &#x2192;</a></div>
+
               </div>
               </div>
         
