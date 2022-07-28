@@ -57,8 +57,8 @@ const data = [
   },
 ];
 
-const newData = [{"Hour":8,"NS-EB":243,"NS-WB":186,"Total":429},{"Hour":9,"NS-EB":384,"NS-WB":237,"Total":621},{"Hour":10,"NS-EB":416,"NS-WB":280,"Total":696},{"Hour":11,"NS-EB":562,"NS-WB":378,"Total":940},{"Hour":12,"NS-EB":611,"NS-WB":499,"Total":1110},{"Hour":13,"NS-EB":650,"NS-WB":596,"Total":1246},{"Hour":14,"NS-EB":610,"NS-WB":684,"Total":1294},{"Hour":15,"NS-EB":528,"NS-WB":651,"Total":1179},{"Hour":16,"NS-EB":477,"NS-WB":610,"Total":1087},{"Hour":17,"NS-EB":446,"NS-WB":646,"Total":1092},{"Hour":18,"NS-EB":398,"NS-WB":462,"Total":860},{"Hour":19,"NS-EB":246,"NS-WB":282,"Total":528}]
-const Chart = () => {
+
+const Chart = ({data}) => {
 
 
  {
@@ -67,7 +67,7 @@ const Chart = () => {
         <LineChart
           width={400}
           height={200}
-          data={newData}
+          data={data}
           margin={{
             top: 20,
             right: 30,
@@ -103,7 +103,15 @@ function DeckTest() {
         BUILDINGS:
         'https://raw.githubusercontent.com/visgl/deck.gl-data/master/examples/trips/buildings.json', // eslint-disable-line
         TRIPS: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/examples/trips/trips-v7.json' // eslint-disable-line
+        
     };
+
+
+    const countData = [{"Hour":8,"NS-EB":243,"NS-WB":186,"Total":429},{"Hour":9,"NS-EB":384,"NS-WB":237,"Total":621},{"Hour":10,"NS-EB":416,"NS-WB":280,"Total":696},{"Hour":11,"NS-EB":562,"NS-WB":378,"Total":940},{"Hour":12,"NS-EB":611,"NS-WB":499,"Total":1110},{"Hour":13,"NS-EB":650,"NS-WB":596,"Total":1246},{"Hour":14,"NS-EB":610,"NS-WB":684,"Total":1294},{"Hour":15,"NS-EB":528,"NS-WB":651,"Total":1179},{"Hour":16,"NS-EB":477,"NS-WB":610,"Total":1087},{"Hour":17,"NS-EB":446,"NS-WB":646,"Total":1092},{"Hour":18,"NS-EB":398,"NS-WB":462,"Total":860},{"Hour":19,"NS-EB":246,"NS-WB":282,"Total":528}]
+
+    const newCountData = [{"Hour":8,"NS-EB":343,"NS-WB":286,"Total":629},{"Hour":9,"NS-EB":384,"NS-WB":237,"Total":621},{"Hour":10,"NS-EB":516,"NS-WB":380,"Total":896},{"Hour":11,"NS-EB":562,"NS-WB":378,"Total":940},{"Hour":12,"NS-EB":611,"NS-WB":499,"Total":1110},{"Hour":13,"NS-EB":650,"NS-WB":596,"Total":1246},{"Hour":14,"NS-EB":610,"NS-WB":684,"Total":1294},{"Hour":15,"NS-EB":628,"NS-WB":751,"Total":1379},{"Hour":16,"NS-EB":577,"NS-WB":710,"Total":1287},{"Hour":17,"NS-EB":546,"NS-WB":746,"Total":1292},{"Hour":18,"NS-EB":498,"NS-WB":562,"Total":1060},{"Hour":19,"NS-EB":246,"NS-WB":282,"Total":528}]
+
+
 
     const MAPBOX_ACCESS_TOKEN = "pk.eyJ1IjoiYnJhbmRlbi1kdXBvbnQiLCJhIjoiY2lmeWZqcXVhNTJwdHUzbTJwbGx2NjljNSJ9.fbeofSfEbOnewOSrZ-wMqA";
     const mapStyle = "mapbox://styles/branden-dupont/ckrdufy001ftm17mtemp7sgwl";
@@ -124,6 +132,11 @@ function DeckTest() {
     return () => window.cancelAnimationFrame(animation.id);
     }, [animation]);
 
+
+    const [address , setAddress] =  useState('Canal St Between Center & Baxter')
+
+    const [newData , setNewData] =  useState(countData);
+    const [totalCount, setTotalCount] = useState('11,082');
 
   
     
@@ -237,7 +250,7 @@ function DeckTest() {
 
       const mapRef = useRef(null);
 
-
+      
       const [INITIAL_VIEW_STATE  , setInitialViewState] =  useState( {
         longitude: -73.9993101,
         latitude: 40.717595,
@@ -290,13 +303,14 @@ function DeckTest() {
                </Map >
                 <div className="p-10 flex justify-end">
                <div className="bg-darkBase h-[500px] w-[450px] ">
-                <div className="text-xl text-white pt-6 text-center font-space">Canal St Between Center & Baxter</div>
+                <div className="text-xl text-white pt-6 text-center font-space">{address}</div>
                 <hr className="text-white mt-2"></hr>
-                <div className="text-white text-center font-space p-2">Total daily pedestrian count: 11,082.
+                <div className="text-white text-center font-space p-2">Total daily pedestrian count: {totalCount}.
 </div>
                 <div className="text-white text-center font-space">Wednesday, March 23, 2022</div>
-                <Chart/>
-                <div className="text-white text-center font-space bg-darkBase pb-4 text-xl" onClick={goToNYC}><a>Next Intersection &#x2192;</a></div>
+                <Chart data={newData } />
+                <div className="text-white text-center font-space bg-darkBase pb-4 text-xl" onClick={() => { goToNYC(); setAddress('34th & 70th'); setNewData(newCountData); setTotalCount("12,082")}}><a>Next Intersection &#x2192;</a></div>
+
 
               </div>
               </div>
