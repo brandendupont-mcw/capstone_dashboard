@@ -9,7 +9,6 @@ import OpenPage from '@/components/HeroLPVC'
 import { Feature } from '@/components/LocationFeature'
 import IntroMap  from "@/components/maps/IntroMap"
 import DeckTest from '@/components/DeckTest'
-import Highlight from '@/components/Highlight' 
 
 const MAX_DISPLAY = 5
 
@@ -23,14 +22,8 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <OpenPage />
-      <Highlight />
-      
-      <Feature />
-
-
-
-    
+      <DeckTest />
+   
     </>
   )
 }

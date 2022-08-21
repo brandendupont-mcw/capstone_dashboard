@@ -5,7 +5,7 @@ class MyDocument extends Document {
       <Html lang="en" className="scroll-smooth">
         <Head>
           
-          <link rel="shortcut icon" content="#ffffff" href="/static/favicons/favicon.ico" />
+          <link rel="shortcut icon" content="#ffffff" href="/static/images/squares.svg" />
           <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
@@ -17,6 +17,7 @@ class MyDocument extends Document {
             <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
 
             <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v9/mapbox-gl.css' rel='stylesheet' />
+            
           <link
 
             rel="icon"
