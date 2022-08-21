@@ -12,27 +12,27 @@ const Highlight = () => {
     return (
     
 <aside
-  className="overflow-hidden bg-gray sm:grid sm:grid-cols-2 sm:items-center"
+  className=" bg-gray sm:grid sm:grid-cols-2 sm:items-center"
 >
   <div className="p-8 md:p-12 lg:px-16 lg:py-24">
     <div className="max-w-xl mx-auto text-center sm:text-left ">
-      <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
+      <h2 className="text-2xl font-bold text-gray-900 md:text-3xl sm:mb-0 mb-4">
          We Developed and Piloted an In-House Pedestrian Counter that Runs on the Edge
       </h2>
 
-      <p className="hidden text-gray-700 md:mt-4 md:block">
+      <p className=" text-gray-700 md:mt-4 md:block">
        Our NYU CUSP capstone program partnered with the Smart Cities IoT Lab at the NYC Office of CTO and the New York City DOT Pedestrian Unit. We developed an open-sourced pedestrian tracking system that can be run a on low powered battery operated device (Google’s Coral Edge TPU). With close to industry level accuracy, it can be utilized by City agencies to count pedestrians as they move through public space in the city.
       </p>
 
       <div className="mt-4 md:mt-8">
         <a
-          href="#"
+          href="https://github.com/Puturbold/LPCV-NYU-CAPSTONE"
           className="relative inline-block group focus:outline-none focus:ring bg-electricBlue focus:ring-accentRed"
         >
           <span
             className="relative z-10 block px-12 py-3 text-sm font-medium text-white transition  rounded group-hover:scale-105"
           >
-           Read More About Our Pilot Below
+           View our Github Repo Here
           </span>
 
           <span

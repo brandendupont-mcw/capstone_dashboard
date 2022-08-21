@@ -22,7 +22,9 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <div className='p-2'>
       <DeckTest />
+      </div>
    
     </>
   )

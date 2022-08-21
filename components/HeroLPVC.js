@@ -32,17 +32,17 @@ const OpenPage = () => {
 
             <ul>
             <li>
-            Abdulaziz Alaql
+            <a className="hover:border-b-2 hover:border-accentRed cursor-pointer" href="https://www.linkedin.com/in/abdulaziz-alaql-11483569/">Abdulaziz Alaql</a>
             </li>
 
             <li>
-            Alec Bardey
+            <a className="hover:border-b-2 hover:border-accentRed cursor-pointer" href="https://www.linkedin.com/in/alec-bardey-b1278779/"> Alec Bardey</a>
             </li>
             <li>
-            Turbold Baatarchuluu
+            <a className="hover:border-b-2 hover:border-accentRed cursor-pointer" href="https://www.linkedin.com/in/turbold-baatarchuluu-194b73a2/"> Turbold Baatarchuluu </a>
             </li>
             <li>
-                Branden DuPont
+            <a className="hover:border-b-2 hover:border-accentRed cursor-pointer" href="https://www.linkedin.com/in/branden-dupont-b8a70254/"> Branden DuPont </a>
             </li>
             </ul>
           </div>
