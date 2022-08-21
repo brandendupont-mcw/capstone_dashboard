@@ -10,6 +10,7 @@ import { Feature } from '@/components/LocationFeature'
 import IntroMap  from "@/components/maps/IntroMap"
 import DeckTest from '@/components/DeckTest'
 import Highlight from '@/components/Highlight' 
+import Footer from '@/components/Footer'
 
 const MAX_DISPLAY = 5
 
@@ -27,6 +28,7 @@ export default function Home({ posts }) {
       <Highlight />
       
       <Feature />
+      <Footer />
 
 
 

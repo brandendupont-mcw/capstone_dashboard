@@ -48,7 +48,7 @@ export const Feature = () => {
   const data3 = [{"name":"Accuracy","value":0.8746}]
 
     return (
-      <div className="px-4 mb-20 bg-darkBase py-20 " >
+      <div className="px-4  bg-darkBase py-20 " >
         <div className="ml-24 mb-4  border-t-8 border-accentRed w-52">
             
         </div>
