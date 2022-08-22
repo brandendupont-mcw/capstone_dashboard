@@ -22,7 +22,7 @@ const OpenPage = () => {
         Low-Power {<br></br>} <span className="">Computer-Vision  </span>{<br></br>} Counting Research
         </div>
         
-        <div className="text-white font-libre text-md  mt-10 max-w-lg " >4 NYU CUSP grad students piloted a machine learning model in NYC that counts pedestrians   on <span className="border-b-2 border-accentRed">  Low Powered Devices</span>.   </div>
+        <div className="text-white font-libre text-md  mt-10 max-w-lg " >4 <a className="cursor-pointer hover:border-b-2 hover:border-accentRed" href="https://cusp.nyu.edu/">NYU CUSP</a> grad students piloted a machine learning model in NYC that counts pedestrians   on <span className="border-b-2 border-accentRed">  Low-Powered Devices</span>.   </div>
         </div>
 
 
