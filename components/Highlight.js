@@ -21,7 +21,7 @@ const Highlight = () => {
       </h2>
 
       <p className=" text-gray-700 md:mt-4 md:block">
-       Our NYU CUSP capstone program partnered with the Smart Cities IoT Lab at the NYC Office of CTO and the New York City DOT Pedestrian Unit. We developed an open-sourced pedestrian tracking system that can be run a on low powered battery operated device (Google’s Coral Edge TPU). With close to industry level accuracy, it can be utilized by City agencies to count pedestrians as they move through public space in the city while preserving privacy.
+       Our NYU CUSP capstone program partnered with the Smart Cities IoT Lab at the NYC Office of CTO and the New York City DOT Pedestrian Unit. We developed an open-sourced pedestrian tracking system that can be run a on low powered battery operated device (Google’s Coral Edge TPU). With close to industry level accuracy, it can be utilized by NYC agencies to count pedestrians as they move through public space in the city while preserving privacy.
       </p>
 
       <div className="mt-4 md:mt-8">

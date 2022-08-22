@@ -14,9 +14,7 @@ const OpenPage = () => {
       <div className="w-full min-h-screen bg-darkBase bg-[url(https://images.unsplash.com/photo-1571145551427-35601e8bcf3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80)]  bg-darkBas bg-blend-multiply bg-center bg-no-repeat bg-cover">
 
         <div className="flex p-10 sm:mr-4  justify-end ">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="white"  strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
+
             </div>
           
         <div className="font-black sm:ml-20 pt-20 ml-4 ">
