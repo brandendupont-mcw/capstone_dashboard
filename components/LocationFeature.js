@@ -43,7 +43,7 @@ const thirdViewState = {
 
 export const Feature = () => {
 
-  const data = [{"name":"Accuracy","value":0.87}];
+  const data = [{"name":"Accuracy","value":0.88}];
   const data2 = [{"name":"Accuracy","value":0.93}];
   const data3 = [{"name":"Accuracy","value":0.87}]
 
@@ -53,7 +53,7 @@ export const Feature = () => {
             
         </div>
         <div className=" text-5xl sm:ml-24 font-semibold text-white"> LPCV Pilot Locations</div>
-        <div className="sm:text-lg xl:ml-24 mt-6 mr-6 lg:ml-10  text-white  max-w-xl"> At three locations in NYC, we validated our pedestrian tracking model on 7 randomly selected 15-min DOT pedestrian videos. We acheived an accuracy of <span className="bg-accentRed text-white pr-1 pl-1">85 - 93%</span>. Click to view a pilot dashboard. <div className="text-darkBase max-w-sm font-bold mt-2 flex hover:border-darkBase"><a className="" href="https://www.canva.com/design/DAFGB3uAilo/L_WfZriy0ZMs2lu55Tprdw/view?utm_content=DAFGB3uAilo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Action Toolkit </a> <a href="https://www.canva.com/design/DAFGB3uAilo/L_WfZriy0ZMs2lu55Tprdw/view?utm_content=DAFGB3uAilo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" className="ml-2 over:border-darkBase"></a></div>
+        <div className="sm:text-lg xl:ml-24 mt-6 mr-6 lg:ml-10  text-white  max-w-xl"> At three locations in NYC, we validated our pedestrian tracking model on 7 randomly selected 15-min DOT pedestrian videos. We acheived an accuracy of <span className="bg-accentRed text-white pr-1 pl-1">87 - 93%</span>. Click to view a pilot dashboard. <div className="text-darkBase max-w-sm font-bold mt-2 flex hover:border-darkBase"><a className="" href="https://www.canva.com/design/DAFGB3uAilo/L_WfZriy0ZMs2lu55Tprdw/view?utm_content=DAFGB3uAilo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Action Toolkit </a> <a href="https://www.canva.com/design/DAFGB3uAilo/L_WfZriy0ZMs2lu55Tprdw/view?utm_content=DAFGB3uAilo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" className="ml-2 over:border-darkBase"></a></div>
         </div>
         <div className="grid 2xl:gap-32 xl:gap-10 sm:gap-4 justify-center row-gap-5 lg:grid-cols-3 xl:mr-32 xl:ml-32">
           <div className="relative">
